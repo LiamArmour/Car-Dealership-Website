@@ -1,0 +1,164 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 --\
+-- Table structure for table `lvmc_misc`\
+--\
+\
+CREATE TABLE `lvmc_misc` (\
+  `id` int(11) NOT NULL AUTO_INCREMENT,\
+  `Name` varchar(100) NOT NULL,\
+  `Telephone` varchar(100) NOT NULL,\
+  `Email` varchar(100) NOT NULL,\
+  `Address1` varchar(100) NOT NULL,\
+  `Address2` varchar(100) NOT NULL,\
+  `Footer` text NOT NULL,\
+  `MonOpen` varchar(10) NOT NULL DEFAULT '00:00',\
+  `MonClose` varchar(10) NOT NULL DEFAULT '00:00',\
+  `TueOpen` varchar(10) NOT NULL DEFAULT '00:00',\
+  `TueClose` varchar(10) NOT NULL DEFAULT '00:00',\
+  `WedOpen` varchar(10) NOT NULL DEFAULT '00:00',\
+  `WedClose` varchar(10) NOT NULL DEFAULT '00:00',\
+  `ThurOpen` varchar(10) NOT NULL DEFAULT '00:00',\
+  `ThurClose` varchar(10) NOT NULL DEFAULT '00:00',\
+  `FriOpen` varchar(10) NOT NULL DEFAULT '00:00',\
+  `FriClose` varchar(10) NOT NULL DEFAULT '00:00',\
+  `SatOpen` varchar(10) NOT NULL DEFAULT '00:00',\
+  `SatClose` varchar(10) NOT NULL DEFAULT '00:00',\
+  `SunOpen` varchar(10) NOT NULL DEFAULT '00:00',\
+  `SunClose` varchar(10) NOT NULL DEFAULT '00:00',\
+  PRIMARY KEY (`id`)\
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;\
+\
+--\
+-- Dumping data for table `lvmc_misc`\
+--\
+\
+INSERT INTO `lvmc_misc` (`id`, `Name`, `Telephone`, `Email`, `Address1`, `Address2`, `Footer`, `MonOpen`, `MonClose`, `TueOpen`, `TueClose`, `WedOpen`, `WedClose`, `ThurOpen`, `ThurClose`, `FriOpen`, `FriClose`, `SatOpen`, `SatClose`, `SunOpen`, `SunClose`) VALUES\
+(1, 'Low Valley Motor Company', '07543835432', 'lvmcsales@hotmail.com', 'Sea Road, Sunderland, SR6 6GN', 'John St, Sunderland, SR1 1HB', 'Site Designed by OLWeb Solutions Ltd', '09:00', '17:00', '09:00', '17:00', '09:00', '17:00', '09:00', '17:00', '09:00', '17:30', '10:00', '16:30', '10:30', '16:00');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `lvmc_sessions`\
+--\
+\
+CREATE TABLE `lvmc_sessions` (\
+  `session_id` varchar(40) NOT NULL DEFAULT '0',\
+  `ip_address` varchar(16) NOT NULL DEFAULT '0',\
+  `user_agent` varchar(50) NOT NULL,\
+  `last_activity` int(10) unsigned NOT NULL DEFAULT '0',\
+  `user_data` text NOT NULL\
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;\
+\
+--\
+-- Dumping data for table `lvmc_sessions`\
+--\
+\
+INSERT INTO `lvmc_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES\
+('bce566f70d3b1f1fb160051250dee311', '86.29.29.228', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) App', 1365541996, ''),\
+('1cfb091f4ac21913df91ed10fd64d1da', '86.29.29.228', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) App', 1365541998, ''),\
+('c49f8dd909e811a92972bd4ce0dfd9ea', '86.29.29.228', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) App', 1365542017, ''),\
+('49833db32f68aa642084cb77b8e1aead', '86.29.29.228', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) App', 1365542023, 'a:2:\{s:9:"user_data";s:0:"";s:9:"logged_in";a:2:\{s:2:"id";s:1:"2";s:8:"username";s:4:"Liam";\}\}'),\
+('32fb72aec1bb9b9afc16b0ad49842f11', '86.29.29.228', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) App', 1365542024, ''),\
+('480c47326c7bfc8fcf467da0425c63b2', '86.29.29.228', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) App', 1365542024, ''),\
+('498cfb8729612b143b651dce2966c587', '86.29.29.228', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) App', 1365542068, 'a:2:\{s:9:"user_data";s:0:"";s:9:"logged_in";a:2:\{s:2:"id";s:1:"2";s:8:"username";s:4:"Liam";\}\}'),\
+('9f1e09c7be2d103030cf3ff2fc349a29', '86.29.29.228', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) App', 1365542069, ''),\
+('1d1e4d01c3ffec237977b1eb977879dd', '86.29.29.228', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) App', 1365542069, ''),\
+('a3fc8f9f8a036681fc7c1b8d3f761697', '86.29.29.228', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) App', 1365542077, ''),\
+('d342b738a16c9a4c0d10ea984e2bc067', '86.29.29.228', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) App', 1365542222, ''),\
+('74cbe479877d8ada0926bfb47e4fdc35', '86.29.29.228', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) App', 1365542226, 'a:2:\{s:9:"user_data";s:0:"";s:9:"logged_in";a:2:\{s:2:"id";s:1:"2";s:8:"username";s:4:"Liam";\}\}'),\
+('842344ed2bbd1197064cc1351e00afa7', '86.29.29.228', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) App', 1365542227, ''),\
+('46661d5c92b2dfa5227a1269b3051233', '86.29.29.228', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) App', 1365542227, ''),\
+('d3f61a0f853e430e362c22b4aac66838', '86.29.29.228', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) App', 1365542300, ''),\
+('c21dea4dac7b2217cd7e65ef93b97946', '86.29.29.228', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) App', 1365542305, 'a:2:\{s:9:"user_data";s:0:"";s:9:"logged_in";a:2:\{s:2:"id";s:1:"2";s:8:"username";s:4:"Liam";\}\}'),\
+('312448c925e5cce412a243ab6226062c', '86.29.29.228', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) App', 1365542305, ''),\
+('47498ea1ce3f01852f87fafaa8c4eb53', '86.29.29.228', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) App', 1365542306, '');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `lvmc_staff`\
+--\
+\
+CREATE TABLE `lvmc_staff` (\
+  `id` tinyint(4) NOT NULL AUTO_INCREMENT,\
+  `username` varchar(10) NOT NULL,\
+  `password` varchar(100) NOT NULL,\
+  `forename` varchar(50) NOT NULL,\
+  `surname` varchar(50) NOT NULL,\
+  `position` enum('Administrator','General Manager','Sales Manager','Salesman') NOT NULL DEFAULT 'Salesman',\
+  `PhotoFilenameLarge` varchar(100) NOT NULL,\
+  `PhotoFilenameSmall` varchar(100) NOT NULL,\
+  PRIMARY KEY (`id`)\
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;\
+\
+--\
+-- Dumping data for table `lvmc_staff`\
+--\
+\
+INSERT INTO `lvmc_staff` (`id`, `username`, `password`, `forename`, `surname`, `position`, `PhotoFilenameLarge`, `PhotoFilenameSmall`) VALUES\
+(1, 'Admin', 'admin12345', 'Site', 'Administrator', 'Administrator', '', ''),\
+(2, 'Liam', 'liamliam', 'Liam', 'Armour', 'General Manager', '', ''),\
+(9, 'Demo', 'Demo', 'Demo', 'User', 'General Manager', 'Jamie1.jpg', 'Jamie1.jpg');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `lvmc_stock`\
+--\
+\
+CREATE TABLE `lvmc_stock` (\
+  `PhotoID` int(11) NOT NULL AUTO_INCREMENT,\
+  `PhotoFilenameSmall` varchar(100) NOT NULL,\
+  `PhotoFilenameLarge` varchar(100) NOT NULL,\
+  `PhotoBack` varchar(100) NOT NULL,\
+  `PhotoInterior` varchar(100) NOT NULL,\
+  `PhotoSide` varchar(100) NOT NULL,\
+  `Registration` varchar(100) NOT NULL,\
+  `Title` varchar(100) NOT NULL,\
+  `Price` varchar(100) NOT NULL,\
+  `Description` text NOT NULL,\
+  `Make` varchar(100) NOT NULL,\
+  `Model` varchar(100) NOT NULL,\
+  `Year` varchar(100) NOT NULL,\
+  `Reg` varchar(10) NOT NULL,\
+  `Gearbox` enum('Manual','Automatic') NOT NULL DEFAULT 'Manual',\
+  `Bodystyle` enum('Hatchback','Saloon','Estate','Convertible','MPV','Coupe','4x4','Sports') NOT NULL DEFAULT 'Hatchback',\
+  `Colour` varchar(100) NOT NULL,\
+  `Engine` varchar(100) NOT NULL,\
+  `Fuel` enum('Petrol','Diesel','LPG','Electric','Hybrid') NOT NULL DEFAULT 'Petrol',\
+  `Mileage` varchar(10) NOT NULL DEFAULT '000000',\
+  `Location` enum('Roker Showroom','Sunderland Showroom') NOT NULL DEFAULT 'Roker Showroom',\
+  `PartEx` enum('No','Yes') NOT NULL DEFAULT 'Yes',\
+  `Extras` text NOT NULL,\
+  `MPG` varchar(20) NOT NULL,\
+  `BHP` varchar(20) NOT NULL,\
+  `Status` enum('ForSale','Sold') NOT NULL DEFAULT 'ForSale',\
+  PRIMARY KEY (`PhotoID`)\
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;\
+\
+--\
+-- Dumping data for table `lvmc_stock`\
+--\
+\
+INSERT INTO `lvmc_stock` (`PhotoID`, `PhotoFilenameSmall`, `PhotoFilenameLarge`, `PhotoBack`, `PhotoInterior`, `PhotoSide`, `Registration`, `Title`, `Price`, `Description`, `Make`, `Model`, `Year`, `Reg`, `Gearbox`, `Bodystyle`, `Colour`, `Engine`, `Fuel`, `Mileage`, `Location`, `PartEx`, `Extras`, `MPG`, `BHP`, `Status`) VALUES\
+(12, 'media.jpg', 'media.jpg', '', '', '', 'FE06 YVK', 'Vauxhall Astra 1.7 CDTI [Elite]', '3699', '5 Doors, Manual, Hatchback, Diesel, 75258 m, Black. 12 MONTHS MOT, FULL SERVICE HISTORY, IMACULATE CONDITION, PAS, Drivers airbag, ABS, Remote central locking, Central locking, Alarm, Immobiliser, Front electric windows, Air conditioning, Alloy wheels, Radio/CD, Cloth seat trim, Solid Paint, Front head restraints, Body coloured bumpers, Rear wiper, Isofix child seat anchor points, Passenger airbag, Height adjustable drivers seat, Lumbar support, Steering wheel rake adjustment, Front fog lights, Folding rear seats, Electric door mirrors, Audio remote control, Trip computer, Side airbags, Steering wheel reach adjustment, Sports seats, Rear headrests, 3x3 point rear seat belts, Service indicator, Space saver spare wheel, Heated door mirrors.', 'Vauxhall', 'Astra', '2006', '06', 'Manual', 'Hatchback', 'Black', '1699cc', 'Diesel', '65,653', 'Sunderland Showroom', 'Yes', 'Leather Seats, Sight Pack, Winter Pack', '41.9', '100', 'ForSale'),\
+(13, 'ng107.jpg', 'ng107.jpg', '', '', '', 'NG55 JUO', 'Peugeot 107 [Urban]', '1995', '5 Doors, Manual, Hatchback, Petrol, 8,260 miles, Electra Blue, 1 Owner(s), Anti-lock brakes check/warning light, Coolant temperature indicator, Digital clock, Handbrake/brake fluid warning light, Lights on warning, Oil level indicator, Power asisted steering - speed related, Remote headlamp adjustment from fascia, Speedo with digital odometer/digital trip recorder, 2 speakers, CD storage in centre console, Facia integrated; coded radio/CD with digital clock, Stereo radio/mono CD with aux socket for MP3 Player, 2 rear number plate illumination lights, Black side rubbing strips, Body colour door handles, Body colour front/rear bumper aprons, Body coloured door mirrors, Chromed front bumper, Electric front windows, Front mounted radio aerial, Heated rear window+rear wash/wipe, Internally adjustable door mirrors, Manual rear window popouts, Side impact absorbent door protection, Single 2 speed front intermittent wiper, Tinted glass, 12V Accessory socket, 4 speed heater fan, 50/50 split', 'Peugeot', '107', '2004', '55', 'Manual', 'Hatchback', 'Black', '998cc', 'Petrol', '61358', 'Sunderland Showroom', 'Yes', 'Remote Locking', '41.58', '48', 'ForSale'),\
+(14, 'renault_clio_campus_23_10_053.jpg', 'renault_clio_campus_23_10_053.jpg', '', '', '', 'W887 FRD', 'Renault Clio 1.2 RT 5DR', '1195', '5 Doors, Manual, Hatchback, Petrol, 78,000 miles, Metallic Blue. Central locking, Electric sunroof, Folding rear seats, Immobiliser, Passenger airbag, Steel wheels, Front head restraints, Steering wheel rake adjustment, Manual sunroof, Body coloured bumpers, PAS, Height adjustable drivers seat, Front electric windows, 3x3 point rear seat belts, Remote central locking, Trip computer, Isofix child seat anchor points, Audio remote control, Drivers airbag, Rear wiper, Steering wheel reach adjustment. Insurance Group:3E', 'Renault', 'Clio Campus', '2005', '55', 'Manual', 'Hatchback', 'Black', '998cc', 'Petrol', '81,487', 'Roker Showroom', 'No', 'None', '31.5', '63', 'ForSale'),\
+(16, 'corsa.jpg', 'corsa.jpg', '', '', '', 'NL13 NAO', 'Vauxhall Corsa [Limited Edition]', '14995', 'Electric front windows, Front fog lights, Front sports seats, Heated door mirrors, Immobiliser, Rear wiper, Sports chassis, Tinted glass, Heated rear window, Service interval indicator, Reach + rake adjustable steering column, Body colour door mirrors, Front seat back map pockets, Height adjustable drivers seat, Body colour door handles, Remote tailgate release, Body colour bumpers, Illuminated boot, 2 rear head restraints, Electrically adjustable door mirrors, Speed sensitive power steering, Multi function trip computer, Height adj front seatbelts/belt force limiters, Accessory socket, Front passenger underseat storage tray, Passenger airbag deactivate switch, Dark style headlights, Dark tinted rear glass.', 'Vauxhall', 'Corsa', '2013', '13', 'Manual', 'Hatchback', 'White', '1200cc', 'Petrol', '10', 'Sunderland Showroom', 'Yes', 'VXR Styling, Ultra Low Tyre''s, Sports Chassis ', '40.0', '85', 'ForSale'),\
+(17, '2012_lamborghini_aventador_lp700_4_g_images_010.jpg', '2012_lamborghini_aventador_lp700_4_g_images_010.jpg', '', '', '', 'AL 1', 'Lamborghini Aventador V12', '100995', 'SOLD', 'Lamborghini', 'Aventador', '2006', '56', 'Manual', 'Hatchback', 'Black', '6,500cc', 'Petrol', '7,564', 'Sunderland Showroom', 'Yes', 'None', '13.3', '580', 'Sold'),\
+(18, 'adam1.jpg', 'adam1.jpg', 'adam1.jpg', '', '', 'NL13BAG', 'Vauxhall Adam 1.2I JAM 3DR', '9995', '3 Doors, Manual, Hatchback, Petrol, 4 miles, Red n Roll, 1 Owner. READY TO DRIVE AWAY TODAY!!! URBAN PACK / Exterior Light pack, Chrome Pack, Multi colour Interior Light Pack /. Air Con, Cd Player with USB, DMB Digital Radio, BLUETOOTH, Cruise Control, ESP, ABS, 6 Airbags. Remote Locking, Electric windows, Fantastic city car, Stand out from the crowd!!! A Great alternative to the Corsa Limited Edtion / vxr. Visit our website for more details on the New Adam including our Glam and Slam Models.. \'a39,995', 'Vauxhall', 'Adam', '2013', '13', 'Manual', 'Hatchback', 'Black', '998cc', 'Petrol', '4', 'Roker Showroom', 'Yes', 'Bucket Seats', '28.7', '160', 'ForSale'),\
+(20, 'megane.jpg', 'megane.jpg', '', '', '', 'SA05 TFJ', 'RENAULT MEGANE 1.5 DCI 80 [DYNAMIQUE]', '1995', 'Manual, Hatchback, Diesel, 95,000 miles, Silver. 12 MONTHS MOT, ONLY 30 A YEAR TO TAX, 5 DOOR, 95K, JUST HAD SERVICE, WE HAVE CHANGED THE TIMING BELT, 2 KEYS, FULL SERVICE HISTORY, REMOTE CENTRAL LOCKING, ALARM, ELECTRIC WINDOWS, CD, A/CON, ALLOYS, F/FOGS, METALLIC PAINT, HEIGHT ADJUST SEAT/STEERING, C/CODED BUMPERS, EXCELLENT CONDITION, LOW INSURANCE', 'Renault', 'Megane', '2004', '05', 'Manual', 'Hatchback', 'Blue', '1498cc', 'Diesel', '101,121', 'Roker Showroom', 'Yes', 'None', '51.7', '80', 'ForSale'),\
+(21, 'nh.jpg', 'nh.jpg', '', '', '', 'ND59 YYL', 'Vauxhall Corsa 1.2 [Active]', '5995', '3 Doors, Automatic, Hatchback, Petrol, 45,500 miles, Black, Full service history, Power Steering, Air Conditioning, Central Locking, Alarm, Cloth Upholstery, Adjustable Steering Column, Electric Windows, Colour Coded Interior, Remote Central Locking, Head Restraints, Height Adjustable Seat, Retractable Headrests, Folding Rear Seats, Rear Headrests, Rear Wash/wipe, Metallic Paintwork, Front Fog Lamps, Colour Coded Body, Air Bag, ABS, Isofix, CD Player, Radio, Alloy wheels.', 'Vauxhall', 'Corsa', '2009', '59', 'Manual', 'Hatchback', 'Blue', '1229cc', 'Petrol', '36,000', 'Sunderland Showroom', 'Yes', 'Xeon Headlights', '31.1', '79.1', 'ForSale'),\
+(22, 'abar.jpg', 'abar.jpg', '', '', '', 'BK09 GXR', 'Abarth 500 1.4 16V T-JET 3DR 2009', '8750', '3 Doors, Manual, Hatchback, Petrol, 64,000 miles, White, 1 Owner. Leather Upholstery, Very Good Condition, Air conditioning, Alloy wheels, CD Player, Full Service History, Finance Available Subject To Status. Insurance Group:13, Finance Available Subject To Status.', 'Abarth', '500', '2009', '09', 'Manual', 'Hatchback', 'White', '1429cc', 'Petrol', '64,000', 'Sunderland Showroom', 'Yes', 'None', '33.2', '135', 'ForSale'),\
+(23, 'astra.jpg', 'astra.jpg', '', '', '', 'NA57 DDL', 'Vauxhall Astra 1.6 [SXI]', '4445', '5 Doors, Manual, Hatchback, Petrol, 79,352 miles, Metallic Silver, MOT-03-2014, 3 Owners. WE HAVE A LOVELY ASTRA 1.4 SXI CLEAN AND TIDY CHEAP TAX AND ANSURANCE, FULL 12 MONTHS M.O.T, JUST BEEN SERVICED, 5 STAMPS IN THE BOOK. THIS IS AN SXI MODEL WITH ALLOY WHEELS AND EXTRA STYLING. PROBABLY CHEAPEST AROUND ABS, Air conditioning, Alloy wheels, Central locking, Folding rear seats, Lumbar support, Immobiliser, Passenger airbag, Radio/CD, Rear headrests, Sports seats, Side airbags, Remote central locking, Height adjustable drivers seat, Audio remote control, Drivers airbag, Electric door mirrors, Front electric windows, Front head restraints, PAS, Front fog lights, 3x3 point rear seat belts, Cloth seat trim, Heated door mirrors, Solid Paint, Trip computer, Steering wheel reach adjustment, Space saver spare wheel, Isofix child seat anchor points, Steering wheel rake adjustment, Rear wiper, Service indicator.', 'Vauxhall', 'Astra', '2007', '57', 'Manual', 'Hatchback', 'Silver', '1629cc', 'Petrol', '48,000', 'Roker Showroom', 'Yes', 'None', '30.1', '100', 'ForSale'),\
+(24, 'ford-fiesta-st-by-mountune_2.jpg', 'ford-fiesta-st-by-mountune_2.jpg', '', '', '', 'KF56 KHY', 'Ford Fiesta 1.25 Style 3dr [Climate]', '3000', '', 'Ford', 'Fiesta', '2007', '56', 'Manual', 'Hatchback', 'Silver', '1229cc', 'Petrol', '45,000', 'Roker Showroom', 'Yes', 'None', '33.1', '67', 'ForSale'),\
+(25, 'ds3.jpg', 'ds3.jpg', '', '', '', 'LB60 TFA', 'Citroen DS3 1.6 Black & White [HDI]', '8000', '3 Doors, Manual, Hatchback, Diesel, 70,834 miles, Polar White, Cloth Trim, A/C, 17 inch alloy wheels, Up to 5000 Cars in stock in One Location, ABS brakes with Traction Control, Central Locking, Cruise Control, Electric Mirrors, Electric Windows (Front), Power-Steering, Radio & CD-player, Rear Head-Rests, Privacy Glass, 3 Door Hatchback, Air Conditioning.', 'Citroen', 'DS3', '2011', '60', 'Manual', 'Hatchback', 'White', '1629cc', 'Diesel', '70,000', 'Roker Showroom', 'Yes', 'Black Alloys', '57.6', '90', 'ForSale'),\
+(26, '2009-Seat-Leon-car-wallpaper.jpg', '2009-Seat-Leon-car-wallpaper.jpg', '', '', '', 'FL06 ACZ', 'Seat Leon 1.9 TDI [Stylance]', '5000', '5 Door Hatchback, Black, Diesel, Long MOT till next year march, long tax left, Leather, Manual, Immobiliser, Steering wheel reach adjustment, Front electric windows, Folding rear seats, Rear headrests, Passenger airbag. Long MOT till next year march, long tax left, cheap insurance. Immaculate condition. Recently serviced majority if not all service history present, leather Seats, ipod connector. ', 'Seat', 'Leon', '2006', '06', 'Manual', 'Hatchback', 'Black', '1929cc', 'Diesel', '98,432', 'Sunderland Showroom', 'Yes', 'None', '56.5', '105', 'ForSale'),\
+(27, 'BK60YKJ1.jpg', 'BK60YKJ1.jpg', '', '', '', 'BK60 YKJ', 'BMW 1 SERIES 116D SPORT 5DR', '12995', '5 Doors, Manual, Hatchback, Diesel, 23,011 miles, Black. ABS, Folding rear seats, Immobiliser, Passenger airbag, Rear headrests, Side airbags, Traction control, Alarm, Body coloured bumpers, Isofix child seat anchor points, Rear wiper, Trip computer, Remote central locking, Front electric windows, Front head restraints, Steering wheel reach adjustment, Drivers airbag, Rear electric windows, Audio remote control, Steering wheel rake adjustment, Service indicator, Electric door mirrors, Heated door mirrors, 3x3 point rear seat belts, Front fog lights. Insurance Group:10', 'BMW', '1 Series', '2010', '60', 'Manual', 'Hatchback', 'Black', '2129cc', 'Diesel', '23,011', 'Sunderland Showroom', 'Yes', 'None', '52.3', '116', 'ForSale'),\
+(28, 'scsdgf.jpg', 'scsdgf.jpg', '', '', '', 'SC53 YTN', 'Vauxhall Corsa [SXI] Twinport', '1445', '3 Doors, Manual, Hatchback, Petrol, 78,541 miles, Metallic Silver. Alarm, Cat D, Adjustable seats, Adjustable steering column/wheel, Anti theft system, Body kit, CD, Cloth upholstery, Climate Control, Colour coding - Body, ABS, Air conditioning, Alloy wheels, Central locking, Folding rear seats, Immobiliser, Passenger airbag, Radio/Cassette, Radio/CD, Rear headrests, Sports seats, Rear wiper, 3x3 point rear seat belts, Drivers airbag, Front electric windows, Front fog lights, Remote central locking, Service indicator, Trip computer, Full size spare wheel, Solid Paint, Cloth seat trim, Front head restraints, Heated door mirrors, Height adjustable drivers seat, PAS, Isofix child seat anchor points, Body coloured bumpers, Electric door mirrors, Audio remote control. ', 'Vauxhall', 'Corsa', '2003', '03', 'Manual', 'Hatchback', 'Black', '1398cc', 'Petrol', '73,654', 'Sunderland Showroom', 'Yes', 'None', '30.2', '80', 'ForSale');\
+}

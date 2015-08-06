@@ -1,0 +1,7 @@
+# password-protect single file
+<Files index.php>
+AuthName "site"
+AuthType Basic
+AuthUserFile /Applications/MAMP/htdocs/LVMC/.htpasswd
+require valid-user
+</Files>
